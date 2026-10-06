@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Venu Dileep Kadali | AWS DevOps &amp; Infrastructure Engineer</title>
+<meta name="description" content="AWS Certified Solutions Architect – Associate. Infrastructure engineer running ECS, EKS, Jenkins CI/CD and Windows/Linux estates at 99.9% uptime.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f6;--panel:#fff;--ink:#0f2238;--mute:#4a5d73;--line:#c9d4e0;--accent:#d9480f;--accent-ink:#fff;--grid:#dbe4ed;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1624;--panel:#12233a;--ink:#e8eef5;--mute:#9fb2c6;--line:#27405e;--accent:#ff8a4c;--accent-ink:#0b1624;--grid:#142a44}}
+:root[data-theme="dark"]{--bg:#0b1624;--panel:#12233a;--ink:#e8eef5;--mute:#9fb2c6;--line:#27405e;--accent:#ff8a4c;--accent-ink:#0b1624;--grid:#142a44}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;gap:22px;flex-wrap:wrap;padding:20px 0;font-weight:500;font-size:15px}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+nav .me{margin-right:auto;color:var(--ink);font-family:"Bricolage Grotesque",sans-serif;font-weight:700}
+.hero{padding:40px 0 56px;display:grid;gap:40px;grid-template-columns:1fr}
+@media(min-width:900px){.hero{grid-template-columns:1fr 1.1fr;align-items:center}}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.03em}
+.role{font-size:1.2rem;color:var(--mute);margin:16px 0 0;max-width:34ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 22px;border:2px solid var(--ink);border-radius:6px;text-decoration:none;font-weight:500}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+.diagram{background:var(--panel);border:2px solid var(--ink);border-radius:10px;padding:14px}
+.diagram svg{width:100%;height:auto;display:block}
+.diagram figcaption{font-size:13px;color:var(--mute);padding:8px 4px 0}
+.d-box{fill:var(--panel);stroke:var(--ink);stroke-width:1.6}
+.d-t{fill:var(--ink);font:500 12px "IBM Plex Sans",sans-serif}
+.d-s{fill:var(--mute);font:400 10px "IBM Plex Sans",sans-serif}
+.d-l{stroke:var(--accent);stroke-width:2;fill:none;stroke-dasharray:6 6;animation:flow 1.4s linear infinite}
+.d-a{fill:var(--accent)}
+.d-hi{fill:var(--accent);stroke:var(--accent)}
+@keyframes flow{to{stroke-dashoffset:-12}}
+@media(prefers-reduced-motion:reduce){.d-l{animation:none}html{scroll-behavior:auto}.btn:hover{transform:none}}
+section{padding:56px 0;border-top:2px solid var(--ink)}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;margin-bottom:28px}
+.about{display:grid;gap:32px}
+@media(min-width:800px){.about{grid-template-columns:1.4fr 1fr}}
+.about p{margin:0 0 16px;max-width:62ch}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.stat{background:var(--panel);border:1.5px solid var(--line);border-radius:8px;padding:16px}
+.stat b{display:block;font:800 2rem "Bricolage Grotesque",sans-serif;color:var(--accent)}
+.stat span{font-size:14px;color:var(--mute);line-height:1.3;display:block}
+.job{background:var(--panel);border:1.5px solid var(--line);border-radius:10px;padding:28px}
+.job-h{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.job-h h3{font-size:1.4rem}.job-h span{color:var(--mute)}
+ul{margin:0;padding-left:20px}li{margin:0 0 10px;max-width:78ch}
+.proj{display:grid;gap:24px}
+@media(min-width:800px){.proj{grid-template-columns:1fr 1fr}}
+.card{background:var(--panel);border:1.5px solid var(--line);border-left:6px solid var(--accent);border-radius:10px;padding:24px}
+.card h3{font-size:1.35rem}.card .sub{color:var(--mute);margin:4px 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:0;list-style:none}
+.tags li{margin:0;font-size:13px;border:1px solid var(--line);border-radius:4px;padding:2px 8px;color:var(--mute)}
+.skills{display:grid;gap:20px}
+@media(min-width:800px){.skills{grid-template-columns:1fr 1fr}}
+.sk h3{font-size:1.1rem;margin-bottom:8px}.sk p{margin:0;color:var(--mute)}
+.cert{display:flex;gap:20px;align-items:center;flex-wrap:wrap;background:var(--ink);color:var(--bg);border-radius:10px;padding:24px 28px}
+.cert h3{font-size:1.3rem}.cert p{margin:4px 0 0;opacity:.85}
+.cert a{margin-left:auto;color:var(--bg);font-weight:500}
+.contact{display:flex;gap:12px;flex-wrap:wrap}
+footer{padding:32px 0 48px;color:var(--mute);font-size:14px;border-top:2px solid var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Main">
+  <a class="me" href="#top">Venu Dileep Kadali</a>
+  <a href="#about">About</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <h1>Venu Dileep Kadali</h1>
+    <p class="role">Infrastructure Engineer and AWS DevOps Engineer. I keep production running and make releases boring.</p>
+    <div class="cta">
+      <a class="btn p" href="#contact">Get in touch</a>
+      <a class="btn" href="https://www.linkedin.com/in/venu-dileep-kadali-4a40ab231" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <figure class="diagram" style="margin:0">
+    <svg viewBox="0 0 460 300" role="img" aria-label="Diagram: Jenkins builds images, Argo CD deploys them to an EKS cluster behind an ALB, with CloudWatch monitoring.">
+      <rect class="d-box" x="10" y="20" width="100" height="52" rx="6"/><text class="d-t" x="60" y="43" text-anchor="middle">Git</text><text class="d-s" x="60" y="58" text-anchor="middle">GitHub / Bitbucket</text>
+      <rect class="d-box" x="180" y="20" width="100" height="52" rx="6"/><text class="d-t" x="230" y="43" text-anchor="middle">Jenkins</text><text class="d-s" x="230" y="58" text-anchor="middle">build · scan · push</text>
+      <rect class="d-box" x="350" y="20" width="100" height="52" rx="6"/><text class="d-t" x="400" y="43" text-anchor="middle">ECR</text><text class="d-s" x="400" y="58" text-anchor="middle">images (Trivy)</text>
+      <path class="d-l" d="M110 46H180"/><path class="d-l" d="M280 46H350"/>
+      <rect class="d-box" x="180" y="120" width="100" height="52" rx="6"/><text class="d-t" x="230" y="143" text-anchor="middle">Argo CD</text><text class="d-s" x="230" y="158" text-anchor="middle">GitOps sync</text>
+      <path class="d-l" d="M400 72V146H280"/>
+      <rect class="d-box d-hi" x="10" y="214" width="130" height="62" rx="6" style="fill:var(--accent)"/><text x="75" y="238" text-anchor="middle" style="fill:var(--accent-ink);font:700 13px 'Bricolage Grotesque',sans-serif">ALB</text><text x="75" y="256" text-anchor="middle" style="fill:var(--accent-ink);font:400 10px 'IBM Plex Sans',sans-serif">traffic in</text>
+      <rect class="d-box" x="165" y="214" width="130" height="62" rx="6"/><text class="d-t" x="230" y="238" text-anchor="middle">EKS · HPA</text><text class="d-s" x="230" y="256" text-anchor="middle">pods autoscale</text>
+      <rect class="d-box" x="320" y="214" width="130" height="62" rx="6"/><text class="d-t" x="385" y="238" text-anchor="middle">CloudWatch</text><text class="d-s" x="385" y="256" text-anchor="middle">+ Site24x7 alerts</text>
+      <path class="d-l" d="M230 172V214"/><path class="d-l" d="M140 245H165"/><path class="d-l" d="M295 245H320"/>
+    </svg>
+    <figcaption>The delivery path I run on the BillWare payment platform.</figcaption>
+  </figure>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="about">
+    <div>
+      <p>I'm an AWS Certified Solutions Architect with 3 years of experience running cloud infrastructure for production and non-production environments.</p>
+      <p>I deploy containers on ECS Fargate and EKS, build Jenkins pipelines for Angular, .NET, Flask and database releases, and administer both Windows and Linux servers. I also handle troubleshooting, monitoring, backup and disaster recovery, and security hardening, including HIPAA compliance work.</p>
+      <p>Based in Hyderabad, working with Apoorva Plus Software.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>99.9%</b><span>uptime across 20+ production servers</span></div>
+      <div class="stat"><b>50%</b><span>faster deployments with Jenkins CI/CD</span></div>
+      <div class="stat"><b>40%</b><span>fewer deployment errors</span></div>
+      <div class="stat"><b>10+</b><span>client projects supported</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <h2>Experience</h2>
+  <article class="job">
+    <div class="job-h"><h3>Infrastructure Engineer, Apoorva Plus Software Pvt Ltd</h3><span>2023 to present · Bengaluru, India</span></div>
+    <ul>
+      <li>Run AWS, Windows and Linux infrastructure for 10+ client projects at 99.9% uptime through monitoring, patching, automation and cost optimization, plus WHM/cPanel support for 10+ production websites.</li>
+      <li>Containerize and deploy apps with Docker, Kubernetes, ECS, EKS and Fargate, using Trivy scanning, load balancing and Auto Scaling.</li>
+      <li>Administer IIS for Angular, .NET, React, Node.js and Flask apps. Designed Jenkins pipelines across Windows and Linux, cutting deployment time by 50% and errors by 40%.</li>
+      <li>Provide L1/L2 and 24/7 production support, using CloudWatch and Site24x7 for root cause analysis and permanent fixes.</li>
+      <li>Run disaster recovery drills: failover tests, backup validation and RTO/RPO assessments.</li>
+      <li>Support SQL Server (backups, transaction logs, SQL Agent jobs, migrations, RBAC, SSRS) and HIPAA compliance for the Burst Billing platform with IAM least privilege, Security Groups and Sprinto.</li>
+    </ul>
+  </article>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="proj">
+    <article class="card">
+      <h3>6Storage</h3><p class="sub">Self-storage management platform · 2023 to present</p>
+      <ul class="tags"><li>Jenkins</li><li>Windows Server</li><li>IIS</li><li>ASP.NET</li><li>Angular</li><li>MSSQL</li><li>Lambda</li><li>Secrets Manager</li></ul>
+      <ul>
+        <li>Built Jenkins pipelines that automate IIS, SQL Server and Windows Service releases, cutting release cycles by about 50%.</li>
+        <li>Deployed Python Flask services on AWS Lambda with IAM-based authentication.</li>
+        <li>Moved secrets and database credentials into AWS Secrets Manager, removing hardcoded values.</li>
+        <li>Designed disaster recovery with EC2 AMIs, S3 archiving, cross-account replication and load balancing.</li>
+        <li>Managed servers across EU and GL regions, and migrated applications with minimal downtime.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>BillWare</h3><p class="sub">Payment processing platform · 2023 to present</p>
+      <ul class="tags"><li>ECS Fargate</li><li>EKS</li><li>HPA</li><li>Argo CD</li><li>Jenkins</li><li>EFS</li><li>ALB</li><li>CloudWatch</li></ul>
+      <ul>
+        <li>Run non-production on ECS Fargate with task definitions, ALB target groups and Auto Scaling policies.</li>
+        <li>Run production on EKS with HPA pod autoscaling and Argo CD GitOps delivery, with Jenkins handling CI.</li>
+        <li>Centralized API logs on Amazon EFS and Samba for faster incident analysis.</li>
+        <li>Give L1/L2 support for Linux hosts, containers and networking, and drive fixes with app and infrastructure teams.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills and certification</h2>
+  <div class="skills">
+    <div class="sk"><h3>AWS</h3><p>EC2, EBS, S3, VPC, IAM, ECS, EKS, ECR, Fargate, Lambda, RDS, EFS, Route 53, Secrets Manager, CloudWatch, CloudTrail, ALB</p></div>
+    <div class="sk"><h3>DevOps and CI/CD</h3><p>Jenkins, Git, GitHub, Bitbucket, Docker, Kubernetes, Helm, Argo CD, Terraform, SonarQube, Auto Scaling</p></div>
+    <div class="sk"><h3>Systems</h3><p>Linux, Windows Server, IIS, Nginx, WHM/cPanel, systemd, Bash, patch management, backup and disaster recovery</p></div>
+    <div class="sk"><h3>Databases</h3><p>Microsoft SQL Server, PostgreSQL: installation, backup and recovery, user and privilege management, hardening</p></div>
+    <div class="sk"><h3>Monitoring</h3><p>CloudWatch, CloudTrail, Site24x7, log analysis, alert management, root cause analysis</p></div>
+    <div class="sk"><h3>Security and networking</h3><p>TCP/IP, DNS, VPC, firewalls, Security Groups, NACLs, IAM, RBAC, IP whitelisting, SSL/TLS, SFTP, Samba</p></div>
+  </div>
+  <div class="cert" style="margin-top:32px">
+    <div><h3>AWS Certified Solutions Architect – Associate (SAA-C03)</h3><p>Valid until June 2029</p></div>
+  </div>
+  <p style="margin-top:28px;color:var(--mute)"><strong style="color:var(--ink)">Education:</strong> B.Sc Computer Science, Vidyanidhi Degree College (Adikavi Nannayya University), 2023, CGPA 8.04/10. <strong style="color:var(--ink)">Languages:</strong> Telugu (native), English (professional), Hindi (intermediate).</p>
+</section>
+
+<section id="contact">
+  <h2>Let's talk</h2>
+  <p style="max-width:56ch;margin:0 0 24px">Open to infrastructure, AWS and DevOps roles. Email is the quickest way to reach me.</p>
+  <div class="contact">
+    <a class="btn p" href="mailto:kadalivenudileep4651@gmail.com">kadalivenudileep4651@gmail.com</a>
+    <a class="btn" href="tel:+919640591321">+91 96405 91321</a>
+    <a class="btn" href="https://www.linkedin.com/in/venu-dileep-kadali-4a40ab231" rel="noopener">LinkedIn</a>
+  </div>
+</section>
+<footer>© 2026 Venu Dileep Kadali · Hyderabad, Telangana</footer>
+</div>
+</body>
+</html>
